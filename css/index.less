@@ -1,0 +1,288 @@
+@main-color: #e92322;
+
+#header {
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+
+    .container {
+        .row {
+            .col-md-3 {
+                img {
+                    position: absolute;
+                    top: 38px;
+                    left: 86px;
+                    opacity: 0;
+                    z-index: 999;
+                }
+
+                a {
+                    color: #666;
+                }
+
+                .col {
+                    display: block;
+                    height: 40px;
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 40px;
+                    position: relative;
+
+                    .btn-danger {
+                        height: 30px;
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+
+            .col-md-3:nth-child(1):hover img {
+                opacity: 1;
+            }
+
+            .col-md-3:nth-child(n+2) {
+                border-left: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+#nav {
+    .container {
+        .navbar-default {
+            background-color: #fff;
+            border: 0px;
+            margin-bottom: 0px;
+
+            .collapsed {
+                margin-top: 20px;
+            }
+
+            i {
+                font-size: 30px;
+                color: @main-color;
+
+                &~i {
+                    color: #333;
+                }
+            }
+
+            li {
+                border-bottom: 2px solid transparent;
+
+                & :hover {
+                    border-bottom: 2px solid @main-color;
+                    color: #333;
+                }
+            }
+
+            a {
+                height: 80px;
+                line-height: 50px;
+
+            }
+        }
+    }
+}
+
+#lunbo {
+    .lg-img {
+        height: 410px;
+        width: 100%;
+        background-position: center;
+    }
+}
+
+#main {
+    .ptotect {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .container {
+            .row {
+                .col {
+                    margin-top: 10px;
+
+                    & :hover,
+                    & :hover i {
+                        color: @main-color;
+                    }
+
+                    i {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+
+    .order {
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+
+            .xuanchuan {
+                color: #666;
+
+                &:hover {
+                    color: rgb(4, 50, 68);
+                }
+            }
+
+            span {
+                color: @main-color;
+            }
+        }
+    }
+
+    .forward {
+        background-color: #eee;
+        padding-top: 40px;
+
+        .container {
+            .nav{
+                li{
+                    a{
+                        color:#666;
+                    }
+                }
+            }
+            .col {
+                display: flex;
+                
+                color: #fff;
+                box-sizing:border-box;
+                padding: 10px;
+                & ~ .col{
+                    .left{
+                        background-color: #fff;
+                        color:#333;
+                    }
+                    .right{
+                        background-color: #fff;
+                        color:#333;
+                    }
+                }
+
+                .left {
+                    background-color: @main-color;
+                    padding: 10px;
+                    flex: 4;
+
+                    .contents {
+
+
+                        .content {
+                            display: inline-block;
+                            width: 40%;
+                        }
+                    }
+                }
+                .right {
+                    background-color: @main-color;
+                    flex: 1;
+                    border-left: 1px dashed #ccc;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 15px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        display: block;
+                        height: 14px;
+                        width: 14px;
+                        background-color: #eee;
+                        position: absolute;
+                        top:-7px;
+                        left:-8px;
+                        border-radius: 50%;
+                    } 
+                    &::after{
+                        content: '';
+                        display: block;
+                        height: 14px;
+                        width: 14px;
+                        background-color: #eee;
+                        position: absolute;
+                        bottom:-7px;
+                        left: -8px;
+                        border-radius: 50%;
+                    }
+                    p {
+                        span {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#news{
+    padding: 40px 0;    
+    .row{
+        >div{
+            h4{
+                text-align: center;
+                line-height: 40px;
+                border-bottom: 1px dashed #ccc;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: -10px;
+                    bottom: -5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border:1px solid #ccc;
+                }
+            }
+            .nav-tabs{
+                border-bottom: 0;
+                // 当小和超小屏幕991及以下的时候需要让li平分1/4 让a居中
+                @media(max-width:991px){
+                    li{
+                        width: 25%;
+                        a{
+                            // a固定宽度 因为a是块级元素会和li宽度一样 所以要固定为60px
+                            width: 60px;
+                            // 因为是块级元素只能使用margin:0 auto; 居中
+                            margin: 0px auto;
+                            
+                        }
+                    }
+                }
+                li{
+                    a{
+                        border-radius: 50%;
+                        margin-bottom: 20px;
+                        color:#ccc;
+                        border:0;
+                        i{
+                            font-size: 30px;
+                        }
+                        &:hover{
+                            background-color: @main-color;
+                        }
+                    }
+                    &.active{
+                        a{
+                            background-color: @main-color;
+                        }
+                    }
+                }
+            }
+            .tab-content{
+                .list-group-item{
+                    border:0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+#header {
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+}
+#header .container .row .col-md-3 img {
+  position: absolute;
+  top: 38px;
+  left: 86px;
+  opacity: 0;
+  z-index: 999;
+}
+#header .container .row .col-md-3 a {
+  color: #666;
+}
+#header .container .row .col-md-3 .col {
+  display: block;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+}
+#header .container .row .col-md-3 .col .btn-danger {
+  height: 30px;
+  margin-bottom: 3px;
+}
+#header .container .row .col-md-3:nth-child(1):hover img {
+  opacity: 1;
+}
+#header .container .row .col-md-3:nth-child(n+2) {
+  border-left: 1px solid #ccc;
+}
+#nav .container .navbar-default {
+  background-color: #fff;
+  border: 0px;
+  margin-bottom: 0px;
+}
+#nav .container .navbar-default .collapsed {
+  margin-top: 20px;
+}
+#nav .container .navbar-default i {
+  font-size: 30px;
+  color: #e92322;
+}
+#nav .container .navbar-default i ~ i {
+  color: #333;
+}
+#nav .container .navbar-default li {
+  border-bottom: 2px solid transparent;
+}
+#nav .container .navbar-default li :hover {
+  border-bottom: 2px solid #e92322;
+  color: #333;
+}
+#nav .container .navbar-default a {
+  height: 80px;
+  line-height: 50px;
+}
+#lunbo .lg-img {
+  height: 410px;
+  width: 100%;
+  background-position: center;
+}
+#main .ptotect {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#main .ptotect .container .row .col {
+  margin-top: 10px;
+}
+#main .ptotect .container .row .col :hover,
+#main .ptotect .container .row .col :hover i {
+  color: #e92322;
+}
+#main .ptotect .container .row .col i {
+  color: #333;
+}
+#main .order {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+#main .order .container {
+  padding-left: 0;
+  padding-right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+#main .order .container .xuanchuan {
+  color: #666;
+}
+#main .order .container .xuanchuan:hover {
+  color: #043244;
+}
+#main .order .container span {
+  color: #e92322;
+}
+#main .forward {
+  background-color: #eee;
+  padding-top: 40px;
+}
+#main .forward .container .nav li a {
+  color: #666;
+}
+#main .forward .container .col {
+  display: flex;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#main .forward .container .col ~ .col .left {
+  background-color: #fff;
+  color: #333;
+}
+#main .forward .container .col ~ .col .right {
+  background-color: #fff;
+  color: #333;
+}
+#main .forward .container .col .left {
+  background-color: #e92322;
+  padding: 10px;
+  flex: 4;
+}
+#main .forward .container .col .left .contents .content {
+  display: inline-block;
+  width: 40%;
+}
+#main .forward .container .col .right {
+  background-color: #e92322;
+  flex: 1;
+  border-left: 1px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  position: relative;
+}
+#main .forward .container .col .right::before {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 14px;
+  background-color: #eee;
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  border-radius: 50%;
+}
+#main .forward .container .col .right::after {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 14px;
+  background-color: #eee;
+  position: absolute;
+  bottom: -7px;
+  left: -8px;
+  border-radius: 50%;
+}
+#main .forward .container .col .right p span {
+  font-size: 30px;
+}
+#news {
+  padding: 40px 0;
+}
+#news .row > div h4 {
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+#news .row > div h4::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+#news .row > div .nav-tabs {
+  border-bottom: 0;
+}
+@media (max-width: 991px) {
+  #news .row > div .nav-tabs li {
+    width: 25%;
+  }
+  #news .row > div .nav-tabs li a {
+    width: 60px;
+    margin: 0px auto;
+  }
+}
+#news .row > div .nav-tabs li a {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: #ccc;
+  border: 0;
+}
+#news .row > div .nav-tabs li a i {
+  font-size: 30px;
+}
+#news .row > div .nav-tabs li a:hover {
+  background-color: #e92322;
+}
+#news .row > div .nav-tabs li.active a {
+  background-color: #e92322;
+}
+#news .row > div .tab-content .list-group-item {
+  border: 0;
+}
